@@ -1,0 +1,35 @@
+{
+  "name": "bobril-bobflux-snippets",
+  "displayName": "Bobril Bobflux Typescript Snippets",
+  "description": "Typescript Snippets with arrow functions for Bobril-Bobflux",
+  "version": "0.0.1",
+  "publisher": "BachPT",
+  "icon": "images/bobril.png",
+  "categories": [
+    "Snippets"
+  ],
+  "galleryBanner": {
+    "theme": "light"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "vscode": "^1.11.2"
+  },
+  "keywords": [
+    "bobril",
+    "bobflux"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "bb",
+        "path": "./snippets/bb.json"
+      }
+    ]
+  }
+}
