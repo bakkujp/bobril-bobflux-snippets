@@ -10,5 +10,89 @@
 			"",
 			"}"
 		]
+	},
+	"Import bobril" : {
+		"prefix": "ibb",
+		"body": "import * as b from 'bobril';"
+	},
+	"Import bobflux" : {
+		"prefix": "ibf",
+		"body" : "import * as f from 'bobflux';"	
+	},
+	"Create Bobril component custom template": {
+		"prefix": "bbf",
+		"body": [			
+			"export const create = b.createComponent<${1}>({",
+			"    render(ctx : ${2}, me : b.IBobrilNode) {",
+			"        ${5}",
+			"    }",
+			"});",
+			"",
+			"interface ${2} extends b.BobrilCtx<${1}> {",
+			"    ${4}",
+			"}",
+			"",
+			"export interface ${1} {",
+			"    ${3}",
+			"}"
+		],
+		"description": "Create bobril component"
+	},
+	"Create Bobril component default template": {
+		"prefix": "bbfd",
+		"body": [
+			"import b from 'bobril';",
+			"export const create = b.createComponent<IData>({",
+			"    render(ctx : IContext, me : b.IBobrilNode) {",
+			"        ${3}",
+			"    }",
+			"});",
+			"",
+			"interface IContext extends b.BobrilCtx<IData> {",
+			"    ${2}",
+			"}",
+			"",
+			"export interface IData {",
+			"    ${1}",
+			"}"
+		],
+		"description": "Create bobril component"
+	},
+	"Create Bobril data interface" : {
+		"prefix" : "bbd",
+		"body": [
+			"export interface ${1} {",
+			"    ${2}",
+			"}"
+		]
+	},
+	"Create Bobril component context interface" : {
+		"prefix" : "bbct",
+		"body" : [
+			"interface ${1} extends b.BobrilCtx<${2}> {",
+			"    ${3}",
+			"}"
+		]
+	},
+	"Create Bobril component factory" : {
+		"prefix" : "bbc",
+		"body" : [
+			"export const create = b.createComponent<${1}>({",
+			"    render(ctx : ${2}, me : b.IBobrilNode) {",
+			"        ${3}",
+			"    }",
+			"});"
+		]
+	},
+	"Create Bobflux action" : {
+		"prefix" : "bfa",
+		"body": [
+			"export const ${1} = f.createAction<${2}, ${3}>(${4}, (state, param) => {",
+			"    ${5}",
+			"    return f.shallowCopy(state, clone => {",
+			"        ${6}",
+            "    });",
+			"});"
+		]
 	}
 }
